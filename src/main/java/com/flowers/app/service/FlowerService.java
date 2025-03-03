@@ -87,4 +87,11 @@ public class FlowerService {
 		
 	}
 
+
+	public List<Flower> getAllFlowersBtCatgory(String category) {
+		
+		
+		return flRepo.findByCategory(category);
+	}
+
 }

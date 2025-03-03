@@ -76,6 +76,13 @@ public class FlowerController {
 		return flSer.getAllFlowers();
 	}
 	
+	@GetMapping("/flowers/app/get/byCategory")
+	public List<Flower> getAllFlowersByCategory(
+			@RequestParam String category) {
+		return flSer.getAllFlowersBtCatgory(category);
+	}
+	
+	
 	//http://localhost:8080/flowers/app/get/one?flowerName=XYZ
 	@GetMapping("/flowers/app/get/one")
 	public Flower getOneFlower(@RequestParam String flowerName) {
